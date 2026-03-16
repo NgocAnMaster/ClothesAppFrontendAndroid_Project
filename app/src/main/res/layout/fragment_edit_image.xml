@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Top AppBar -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorSurface"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        app:title="Edit image"
+        app:titleTextColor="@android:color/black"
+        app:menu="@menu/edit_image_menu" />
+
+    <!-- Center Image -->
+    <ImageView
+        android:id="@+id/editImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        app:layout_anchor="@id/topAppBar"
+        app:layout_anchorGravity="center"
+        android:layout_gravity="center"
+        android:contentDescription="Editable image" />
+
+    <!-- Bottom toolbar -->
+    <LinearLayout
+        android:id="@+id/bottomTools"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="?attr/colorSurface">
+
+        <ImageButton
+            android:id="@+id/btnCrop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_crop"
+            android:contentDescription="Crop"
+            style="?attr/borderlessButtonStyle"/>
+
+        <ImageButton
+            android:id="@+id/btnFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_filter"
+            android:contentDescription="Filter"
+            style="?attr/borderlessButtonStyle"/>
+
+        <ImageButton
+            android:id="@+id/btnPen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_edit"
+            android:contentDescription="Pen"
+            style="?attr/borderlessButtonStyle"/>
+
+        <ImageButton
+            android:id="@+id/btnSticker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_sticker"
+            android:contentDescription="Stickers"
+            style="?attr/borderlessButtonStyle"/>
+
+        <ImageButton
+            android:id="@+id/btnUndo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_undo"
+            android:contentDescription="Undo"
+            style="?attr/borderlessButtonStyle"/>
+
+        <ImageButton
+            android:id="@+id/btnRedo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_redo"
+            android:contentDescription="Redo"
+            style="?attr/borderlessButtonStyle"/>
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

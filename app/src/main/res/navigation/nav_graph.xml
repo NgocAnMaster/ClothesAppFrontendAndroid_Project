@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nav_discover">
+
+    <!-- Discover / Home (start) -->
+    <fragment
+        android:id="@+id/nav_discover"
+        android:name="com.master.myapplication2.HomeFragment"
+        android:label="Discover" />
+
+    <!-- Create -->
+    <fragment
+        android:id="@+id/nav_create"
+        android:name="com.master.myapplication2.CreateFragment"
+        android:label="Create" >
+        <!-- action to EditImage -->
+        <action
+            android:id="@+id/action_create_to_editImage"
+            app:destination="@id/editImageFragment" />
+    </fragment>
+
+    <!-- Edit image -->
+    <fragment
+        android:id="@+id/editImageFragment"
+        android:name="com.master.myapplication2.EditImageFragment"
+        android:label="Edit Image" >
+        <!-- action to Products page -->
+        <action
+            android:id="@+id/action_editImage_to_products"
+            app:destination="@id/productsFragment" />
+    </fragment>
+
+    <!-- Products (placeholder) -->
+    <fragment
+        android:id="@+id/productsFragment"
+        android:name="com.master.myapplication2.ProductsFragment"
+        android:label="Products" />
+
+    <!-- Account -->
+    <fragment
+        android:id="@+id/nav_account"
+        android:name="com.master.myapplication2.AccountFragment"
+        android:label="Account" />
+</navigation>
